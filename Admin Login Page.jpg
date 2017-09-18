@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0041)http://www.bajajworld.com/admin/Login.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="./Admin Login Page_files/style.css" rel="stylesheet" type="text/css">
+
+<title>Admin Login Page</title>
+<script language="JavaScript" src="./Admin Login Page_files/prototype.js" type="text/javascript">
+
+</script>
+
+<script language="javascript">
+function checkfrm()
+{
+	if(document.form1.UserName.value == "")
+	{
+		document.form1.UserName.focus();
+	}
+	else
+	{
+		document.form1.Password.focus();
+	}
+}
+  var myGlobalHandlers = {
+		onCreate: function(){
+			$("status").innerHTML = 'Please Wait...';
+		},
+
+		onComplete: function() {
+			if(Ajax.activeRequestCount == 0){
+				$("status").innerHTML = '';
+                                
+			}
+                         
+		}
+	};
+Ajax.Responders.register(myGlobalHandlers);
+
+	function submitForm()
+	{
+		 Ajax.Responders.register(myGlobalHandlers);
+        var papr = "UserName=" + $('UserName').value + "&Password=" + $('Password').value;
+		 new Ajax.Updater('mydiv','CheckUserNamePassword.php', 
+        {
+            method:'post', parameters: papr
+            ,onComplete: showResponse
+        });
+		return false;
+	}
+	
+	function showResponse(originalRequest)
+	{
+   		if($('mydiv').innerHTML=='')
+    		$('form1').submit();
+   }
+
+</script>
+<link href="./Admin Login Page_files/all.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style1 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+#Layer1 {
+	position:absolute;
+	width:176px;
+	height:114px;
+	z-index:1;
+	left: 130px;
+	top: 18px;
+}
+#Layer2 {
+	position:absolute;
+	width:355px;
+	height:40px;
+	z-index:1;
+	background-color: #FF7700;
+	top: 5px;
+	left: 81px;
+}
+-->
+</style>
+</head>
+
+<body onload="checkfrm();" bgcolor="#ffffff">
+<table width="823" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tbody><tr bordercolor="#FF7700">
+    <td colspan="3" bordercolor="#D4D0C8" bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#FF8700" bgcolor="#FF9300">
+      <tbody><tr>
+        <td width="43%">&nbsp;</td>
+        <td width="9%">&nbsp;</td>
+        <td width="48%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bordercolor="#FF8E00">&nbsp;</td>
+        <td><img src="./Admin Login Page_files/cutup.gif" width="83" height="25"></td>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  
+  <tr>
+    <td width="351" height="322"><img src="./Admin Login Page_files/loginPage_mainGraphicAdmin.gif" width="310" height="332"></td>
+    <td colspan="2" valign="top" bordercolor="#CCCCCC" bgcolor="#FFFFFF"><table width="100%" height="318" border="0">
+      <tbody><tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="right"><img src="./Admin Login Page_files/adminlogo.jpg" width="213" height="81"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><form id="form1" name="form1" method="post" action="http://www.bajajworld.com/admin/LoginProcessing.php" onsubmit="return submitForm();">
+          <table width="214" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+              <tbody><tr>
+                <td align="left" bordercolor="#BBD9EE">&nbsp;</td>
+                <td width="118" bordercolor="#BBD9EE" bgcolor="#FFFFFF">&nbsp;</td>
+                <td width="24" bordercolor="#FFFFFF" background="./Admin Login Page_files/Drag to a file to choose it-"><img src="./Admin Login Page_files/cutside.gif" width="24" height="25"></td>
+              </tr>
+              <tr>
+                <td width="72" height="26" align="center" bordercolor="#BBD9EE" class="button"><strong>Username</strong></td>
+                <td height="26" colspan="2" bordercolor="#BBD9EE"><input name="UserName" type="text" class="text" id="UserName" size="20"></td>
+                </tr>
+              <tr>
+                <td height="29" align="center" bordercolor="#BBD9EE" class="button"><strong>Password</strong></td>
+                <td height="29" colspan="2" bordercolor="#BBD9EE"><input name="Password" type="password" class="text" id="Password" size="20"></td>
+                </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" bordercolor="#BBD9EE"><input name="Submit" type="submit" class="button_css" value="Login"></td>
+                </tr>
+            </tbody></table>
+          <div id="mydiv" class="error_msg" align="center"></div>
+          <div class="index_style1" id="status" align="center"></div>
+        </form></td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td colspan="3"><table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#FF8700" bgcolor="#FF9300">
+      <tbody><tr>
+        <td width="43%" bgcolor="#FFFFFF">&nbsp;</td>
+        <td width="9%"><img src="./Admin Login Page_files/cutdown.gif" width="83" height="25"></td>
+        <td width="48%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bordercolor="#FF8E00">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="30" bordercolor="#FF8E00" bgcolor="#330033">&nbsp;</td>
+        <td bgcolor="#330033">&nbsp;</td>
+        <td align="right" bgcolor="#330033"><span class="style1">Powered By Indoushosting </span></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+
+</body></html>

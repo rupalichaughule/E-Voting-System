@@ -1,0 +1,92 @@
+.header
+{
+margin:0 px;
+padding :0 px;
+height:25%;
+}
+.right
+{
+	height:50%;
+	width:40%;
+	float:right;
+	background-color:red;
+}
+.vloginpage
+{
+	float:left;
+	margin-left:35%;
+}
+.vrg
+{
+margin-left:10%;
+float:left;
+}
+.vrg table
+{
+	
+}
+	
+}
+.left
+{
+background-color:blue;
+margin:0;
+float:left;
+width:50%;
+ }
+.left img
+{
+ width:60%;
+}
+#navMenu
+{
+
+	margin-left:10%;
+	margin-top:0px;
+	padding:0;
+}
+#navMenu ul
+{
+	
+	margin:0;
+	padding:0;
+	line-height:30px;
+
+}
+#navMenu li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+	position:relative;
+	background:#81DAF5;
+}
+#navMenu ul li a
+{
+	text-align:center;
+	text-decoration: none;
+	height:30px;
+	width : 200px;
+	display:block; 
+	border:1px solid;
+}
+#navMenu ul ul
+{
+	position:absolute;
+	visibility: hidden;
+	top:30 px;
+}
+#navMenu ul li:hover ul
+{
+	visibility:visible;
+
+}
+#navMenu li:hover
+{
+	background:red;
+}
+.vj
+{
+float:left;	
+}

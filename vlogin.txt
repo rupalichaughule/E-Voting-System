@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Vote for change</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="header">
+<img   src=img/hd.jpg  width=100% height=100% >
+<div id=navMenu>
+<ul>
+	<li><a href="start.html"> Home</a></li>
+</ul>
+<ul>
+	<li><a href="#">Canditate &#9662;</a>
+		<ul>
+			<li><a href="#">Login </a></li>
+			<li><a href="#">Sign Up </a></li> 	
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li><a href="#">Voter &#9662;</a>
+		<ul>
+			<li><a href="#">Login </a></li>
+			<li><a href="votereg.html">Sign Up </a></li> 
+			<li><a href="#">Canditate Info </a></li>	
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li><a href="#"> Admin</a></li>
+</ul>
+<ul>
+	<li><a href="#"> Contact us</a></li>
+</ul>
+
+
+</div>
+</div>
+
+</body>
+</html>
